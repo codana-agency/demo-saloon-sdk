@@ -1,16 +1,16 @@
 <?php
 
-namespace VendorName\SDK;
+namespace Codana\DemoSaloonSdk;
 
-use VendorName\SDK\Responses\SDKResponse;
+use Codana\DemoSaloonSdk\Requests\LodgingsCollection;
+use Codana\DemoSaloonSdk\Responses\DemoSaloonSdkResponse;
 use Sammyjo20\Saloon\Http\SaloonConnector;
 use Sammyjo20\Saloon\Traits\Plugins\AcceptsJson;
-use VendorName\SDK\Requests\ExampleRequestCollection;
 
 /**
- * @method ExampleRequestCollection example
+ * @method LodgingsCollection lodgings
  */
-class SDK extends SaloonConnector
+class DemoSaloonSdk extends SaloonConnector
 {
     use AcceptsJson;
 
@@ -19,22 +19,23 @@ class SDK extends SaloonConnector
      *
      * @var string
      */
-    protected string $apiBaseUrl = ':base_url';
+    protected string $apiBaseUrl = 'https://opendata.visitflanders.org';
 
     /**
      * Custom response that all requests will return.
      *
      * @var string|null
      */
-    protected ?string $response = SDKResponse::class;
+    protected ?string $response = DemoSaloonSdkResponse::class;
 
     /**
-     * The requests/services on the SDK.
+     * The requests/services on the ToerismeVlaanderenSdk.
      *
      * @var array
+     * @method LodgingsCollection lodgings
      */
     protected array $requests = [
-        'example' => ExampleRequestCollection::class,
+        'lodgings' => LodgingsCollection::class,
     ];
 
     /**
@@ -64,7 +65,9 @@ class SDK extends SaloonConnector
      */
     public function defaultHeaders(): array
     {
-        return [];
+        return [
+            'Content-Type' => 'application/json',
+        ];
     }
 
     /**
@@ -74,6 +77,8 @@ class SDK extends SaloonConnector
      */
     public function defaultConfig(): array
     {
-        return [];
+        return [
+            'timeout' => 30,
+        ];
     }
 }

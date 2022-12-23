@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\SDK\Data;
+namespace Codana\DemoSaloonSdk\Data;
 
 use Spatie\DataTransferObject\DataTransferObject;
 

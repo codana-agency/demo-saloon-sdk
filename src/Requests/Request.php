@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorName\SDK\Requests;
+namespace Codana\DemoSaloonSdk\Requests;
 
-use VendorName\SDK\SDK;
+use Codana\DemoSaloonSdk\DemoSaloonSdk;
 use Sammyjo20\Saloon\Http\SaloonRequest;
 
 class Request extends SaloonRequest
@@ -10,5 +10,5 @@ class Request extends SaloonRequest
     /**
      * @var string|null
      */
-    protected ?string $connector = SDK::class;
+    protected ?string $connector = DemoSaloonSdk::class;
 }

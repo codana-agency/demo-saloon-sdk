@@ -1,19 +1,19 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "codana/demo-saloon-demo-saloon-sdk",
+    "description": "This is a demo project for Saloon made by Codana for the Toerisme Vlaanderen API",
     "type": "library",
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/codana/demo-saloon-demo-saloon-sdk",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "VendorName\\SDK\\": "src/",
-            "VendorName\\SDK\\Tests\\": "tests/"
+            "Codana\\DemoSaloonSdk\\": "src/",
+            "Codana\\DemoSaloonSdk\\Tests\\": "tests/"
         }
     },
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com"
+            "name": "Noah Gillard",
+            "email": "noah@codana.eu"
         }
     ],
     "minimum-stability": "stable",

@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorName\SDK\Exceptions;
+namespace Codana\DemoSaloonSdk\Exceptions;
 
 use Sammyjo20\Saloon\Http\SaloonResponse;
 use Sammyjo20\Saloon\Exceptions\SaloonRequestException;
 
-class SDKRequestException extends SaloonRequestException
+class DemoSaloonSdkRequestException extends SaloonRequestException
 {
     /**
      * Retrieve the response.

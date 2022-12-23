@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\SDK\Exceptions;
+namespace Codana\DemoSaloonSdk\Exceptions;
 
 use Exception;
 
